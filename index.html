@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/magic-sdk/dist/magic.js"></script>
     <script>
     
-    const m = new Magic('pk_live_655B325EB3A415EA');
+    const m = new Magic('magic_key');
     async function login(){
 	    try {
 		  await m.auth.loginWithMagicLink({ email: document.getElementById('aemail').value});
@@ -128,7 +128,7 @@
             <div class="container" style="height: 309px;margin: 50px;padding: 74px;">
                 <div class="row" style="color: rgb(0,0,0);">
                     <div class="col-lg-8 mx-auto">
-                        <h2>NOtebook</h2>
+                        <h2>Notebook</h2>
                         <p>Lucrezi la o tema sau la un proiect si ai nevoie de un loc rapid unde sa scrii, formatezi si sa adaugi imagini? Foloseste notebook-ul din A.P.E.L. pentru o experienta fluida si rapida.</p>
                         <ul class="list-inline banner-social-buttons"></ul>
                     </div>
@@ -184,7 +184,7 @@
 	    method: 'POST',
 	    headers: {
 	      'Content-Type': 'application/json',
-	      'Authorization': 'Bearer sk-8M6UgWvQR8bAEXBdmpCrNBIg2FmRQeXkN3iEkwYF'
+	      'Authorization': 'Bearer OPEN_AI_BETA_KEY'
 	    },
 	    body: JSON.stringify(data)
 	  });
@@ -232,7 +232,7 @@
 	    method: 'POST',
 	    headers: {
 	      'Content-Type': 'application/json',
-	      'Authorization': 'Token 84a0d79f7f3774d8803a07d4be54bcce47082f47'
+	      'Authorization': 'Token monkey_learn_key'
 	    },
 	    body: JSON.stringify(data)
 	  });
