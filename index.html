@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/magic-sdk/dist/magic.js"></script>
+    <script>
+    
+    const m = new Magic('pk_live_655B325EB3A415EA');
+    async function login(){
+	    try {
+		  await m.auth.loginWithMagicLink({ email: document.getElementById('aemail').value});
+		  const idToken = await m.user.getIdToken();
+		  document.getElementById("avatar1").src = "https://robohash.org/" + String(idToken) + ".png";
+		  document.getElementById("avatar2").src = document.getElementById("avatar1").src;
+		  document.getElementById("idav").innerHTML = "ID Avatar: did:3:" + String(idToken).substr(1,10);
+		  
+	    } catch {
+		  console.log("Autentificare esuata");
+	    }
+    }
+    
+    
+    
+	  
+    
+    </script>
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77" style="background: rgb(247,239,239);color: rgb(3,3,3);">
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item nav-link"><a class="nav-link active" href="#about">About</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="#createav">CREATE AVATAR</a></li>
+                    <li class="nav-item nav-link"><a class="nav-link" href="#avatar">AVATAR</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background: url(&quot;https://gateway.pinata.cloud/ipfs/QmWijhjcPH1fveSWhPVu2gmwFUPA9UXyCWP2D8U17of5ni&quot;) top / contain no-repeat;width: 1825px;">
+        <div class="intro-body">
+            <div class="card"></div>
+            <div class="col-xxl-7" style="text-align: left;">
+                <h1 style="margin: 334px;padding: -42px;">AI-POWERED&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;E-LEARNING</h1>
+            </div>
+            <div class="container" style="margin: 225px;">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto"><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="text-center content-section" id="about" style="height: 997.7px;"><img class="img-fluid" src="https://gateway.pinata.cloud/ipfs/QmPgZVHjraX8R9M1Sc6adFfq3KmEXkGQqaqLJ7Kz1CvR9H"></section>
+    <section class="text-center download-section content-section" id="createav" style="background: url(&quot;https://gateway.pinata.cloud/ipfs/QmQEjtPMscUGt6gqgd6E3nkt85Lnhyc8EsxdbudmfcYtdv&quot;) no-repeat;background-size: cover;padding: 331px 0px;">
+        <div class="container">
+            <div class="col-lg-8 mx-auto">
+                <h1 style="color: rgb(69,41,119);">avatar-lab</h1>
+                <hr style="color: rgb(0,0,0);"><img id="avatar1" src=""><input id="aemail" class="border rounded-pill shadow-lg form-control-lg" type="text" placeholder="Adresa email" style="height: 46px;text-align: center;">
+                <p style="color: rgb(109,71,139);margin: 20px;">Dupa finalizarea crearii contului vei avea un avatar personal, unic, care va evolua cu tine. Tot el va reprezenta dovada digitala, verificabila, a cunostintelor tale.</p>
+            </div>
+        </div><button onclick="login()" class="btn btn-primary btn-lg shadow-lg" type="button" style="background: rgb(255,255,255);">genereaza</button>
+        
+    </section>
+    
+    <section class="text-center content-section" id="avatar" style="background: url(&quot;https://gateway.pinata.cloud/ipfs/Qmcn9MB82KmfAjZJNELoQfNeTzsutVnf7HW6xUYpDq13vo&quot;) no-repeat;background-size: cover;height: 736px;padding: 283px 0px;">
+        <div class="container">
+            <div class="row" style="color: rgb(0,0,0);">
+                <div class="col-xxl-1"><img id = "avatar2" src="" style="margin: -102px;width: 290px;"></div>
+                <div class="col-lg-8 col-xxl-8 offset-xxl-1 mx-auto">
+                    <h2>evolutie avatar</h2><span id = "idav" style="margin: 0px;padding: 0px;">ID Avatar:&nbsp;</span>
+                    <hr>
+                    <p id="atr1">Atribut 1:</p>
+                    
+                    <p></p>
+                    <ul class="list-inline banner-social-buttons"></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center content-section" id="smartool" style="background: url(&quot;https://gateway.pinata.cloud/ipfs/QmSZAdxCLyGDfzRASw3SHphcR55FLpDs1mwia4NCZt6aMe&quot;);background-size: cover;">
+        <div class="container" style="padding: 30px;">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 style="color: rgb(255,255,255);">OPEN-AI TOOLS</h2>
+                    <p style="color: rgb(255,255,255);">Dupa ce scrii in input textul dorit, selecteaza unealta de care ai avea nevoie sa te ajute. Dupa ce primesti rezultatul dorit, da click pe invata pentru a evolua avatar-ul tau.</p>
+                    <ul class="list-inline banner-social-buttons"></ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxl-5 offset-xxl-4" style="padding: 14px;">
+            <div class="btn-toolbar" style="text-align: center;">
+                <div class="btn-group" role="group"><button id="tldr" class="btn border rounded-0 shadow-lg tldr" type="button" style="color: rgb(255,255,255);background: rgb(225,153,149);">General Query</button><button id ="essay" class="btn border rounded-0 shadow-lg" type="button" style="color: rgb(255,255,255);background: rgb(225,153,149);">Ajutor eseu</button></div>
+                <div class="btn-group" role="group"><button id = "nr" class="btn border rounded-0 shadow-lg" type="button" style="color: rgb(255,255,255);background: rgb(225,153,149);">Notite -&gt; rezumat</button><button id = "rn" class="btn border rounded-0 shadow-lg" type="button" style="color: rgb(255,255,255);background: rgb(225,153,149);">&nbsp;tema -&gt; NOTITE</button></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 style="color: rgb(255,255,255);">Input</h1>
+                </div>
+                <div class="col-md-6">
+                    <h1 style="color: rgb(255,255,255);">output</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><textarea id="input" class="border rounded shadow-lg" style="width: 471px;height: 550px;"></textarea></div>
+                <div class="col-md-6"><textarea id="output" class="border rounded shadow-lg" style="width: 471px;height: 550px;"></textarea></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col"><button id="learn" class="btn btn-primary border rounded shadow" type="button" style="color: rgb(255,255,255);background: rgb(225,153,149);width: 169.0312px;">INVATA</button></div>
+            </div>
+        </div>
+    </section>
+    <section class="text-center content-section" id="notebook" style="background: url(&quot;https://gateway.pinata.cloud/ipfs/Qme5VWfvHeZHn4vaHVi1Wzzesvw5xTSXMPDGVbzcLkC6FC&quot;);background-size: cover;">
+        <div class="col-xxl-12 offset-xxl-1">
+            <div class="container" style="height: 309px;margin: 50px;padding: 74px;">
+                <div class="row" style="color: rgb(0,0,0);">
+                    <div class="col-lg-8 mx-auto">
+                        <h2>NOtebook</h2>
+                        <p>Lucrezi la o tema sau la un proiect si ai nevoie de un loc rapid unde sa scrii, formatezi si sa adaugi imagini? Foloseste notebook-ul din A.P.E.L. pentru o experienta fluida si rapida.</p>
+                        <ul class="list-inline banner-social-buttons"></ul>
+                    </div>
+                </div><link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+<style>
+    #editor {
+        height: 350px;
+    }
+</style>
+<!-- Create the editor container -->
+<div id="editor">
+  
+</div>
+
+<!-- Include the Quill library -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <!-- Initialize Quill editor -->
+<script>
+  var quill = new Quill('#editor', {
+    modules: {
+    toolbar: [
+      [{ header: [1, 2, 3,false] }],
+      ['bold', 'italic'],
+      ['link', 'blockquote', 'code-block', 'image'],
+      [{ list: 'ordered' }, { list: 'bullet' }]
+    ]
+  },
+    theme: 'snow'
+  });
+  
+  
+  
+</script>
+
+
+<button id="pin" class="btn btn-primary border rounded shadow-lg" type="button" style="height: 39px;margin: 48px;background: rgb(225,153,149);color: rgb(255,255,255);width: 136.8125px;"><a href="https://siasky.net/AAB_p0GATIuFUYXGdrY1xrtuSqJwC5a9eXSxfBzQDozWJw" target="_blank">salveaza</a></button>
+            </div>
+        </div>
+    </section>
+    <footer style="margin: 160px;">
+        <div class="container text-center">
+            <p style="color: rgb(0,0,0);">Copyright © A.P.E.L. 2021</p>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+
+    <script>
+    async function postData(url = '', data = {}) {
+    	  
+	  const response = await fetch(url, {
+	    method: 'POST',
+	    headers: {
+	      'Content-Type': 'application/json',
+	      'Authorization': 'Bearer sk-8M6UgWvQR8bAEXBdmpCrNBIg2FmRQeXkN3iEkwYF'
+	    },
+	    body: JSON.stringify(data)
+	  });
+	  return response.json();
+	}
+	
+	
+	let buton_tldr = document.getElementById('tldr');
+	
+	buton_tldr.addEventListener("click",()=>{
+	postData('https://api.openai.com/v1/engines/davinci/completions', { prompt: document.getElementById('input').value, temperature: 0.3, max_tokens: 60, top_p: 1.0,frequency_penalty:0.0, presence_penalty:0.0})
+	  .then(data => {
+	    document.getElementById('output').value = data['choices'][0]['text']	  });
+	});
+	
+	let buton_eseu = document.getElementById('essay');
+	
+	buton_eseu.addEventListener("click",()=>{
+	postData('https://api.openai.com/v1/engines/davinci/completions', { prompt: document.getElementById('input').value, temperature: 0.7, max_tokens: 60, top_p: 1.0,frequency_penalty:0.0, presence_penalty:0.0})
+	  .then(data => {
+	    document.getElementById('output').value = data['choices'][0]['text']	  });
+	});
+	
+	let buton_nr = document.getElementById('nr');
+	
+	buton_nr.addEventListener("click",()=>{
+	postData('ttps://api.openai.com/v1/engines/davinci-instruct-beta/completions', { prompt: document.getElementById('input').value, temperature: 0.7, max_tokens: 64, top_p: 1.0,frequency_penalty:0.0, presence_penalty:0.0})
+	  .then(data => {
+	    document.getElementById('output').value = data['choices'][0]['text']	  });
+	});
+	
+	let buton_rn = document.getElementById('rn');
+	
+	buton_rn.addEventListener("click",()=>{
+	postData('ttps://api.openai.com/v1/engines/davinci-instruct-beta/completions', { prompt: document.getElementById('input').value, temperature: 1, max_tokens: 64, top_p: 1.0,frequency_penalty:0.0, presence_penalty:0.0})
+	  .then(data => {
+	    document.getElementById('output').value = data['choices'][0]['text']	  });
+	});
+	
+     /* MonkeyLearn - module de invatare : clasificare etc. */
+     
+     async function learnMonkey(url = '', data = {}) {
+    	  
+	  const response = await fetch(url, {
+	    method: 'POST',
+	    headers: {
+	      'Content-Type': 'application/json',
+	      'Authorization': 'Token 84a0d79f7f3774d8803a07d4be54bcce47082f47'
+	    },
+	    body: JSON.stringify(data)
+	  });
+	  return response.json();
+	}
+	
+       let buton_learn = document.getElementById('learn');
+       buton_learn.addEventListener("click", () => {
+       	learnMonkey('https://api.monkeylearn.com/v3/classifiers/cl_o46qggZq/classify/', {data: [String(document.getElementById('output'))] })
+       	.then(data => {
+       		document.getElementById('atr1').innerHTML = "Atribut 1: " + String(data[0]['classifications'][0]['tag_name'])
+       	});
+       });
+       
+       
+	
+    </script>
+</body>
+
+</html>

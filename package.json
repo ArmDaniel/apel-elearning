@@ -1,0 +1,19 @@
+{
+  "name": "apel-sketch",
+  "version": "1.0.0",
+  "description": "ai-powered e-learning platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "apelsk"
+  },
+  "type": "commonjs",
+  "keywords": [
+    "ai",
+    "e-learning"
+  ],
+  "author": "Daniel Armasu",
+  "license": "MIT",
+  "dependencies": {
+    "monkeylearn": "^3.4.0"
+  }
+}
